@@ -1,0 +1,19 @@
+<view class="" style="background-image: url(../../images/b1.jpg);background-size:100% 100%;">
+   <!-- <image class="hp_img" src="{{hp_img}}" /> -->
+   <view class="cu-bar search">
+      <view class="search-form round">
+         <text class="cuIcon-search"></text>
+         <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput="searchIcon"></input>
+      </view>
+   </view>
+   <view class='nav-list bottom_m '>
+      <navigator open-type="square_data" url="" class="nav-li bg-white sm_container" wx:for="{{square_data}}" wx:key="item">
+         <view class="ivew">
+            <image src="{{item.imageUrl}}" class="myicon">  </image> 
+         </view> 
+         <text class="sq_title">{{item.name}}</text>
+         <text class="sq_details">{{item.details}}</text>
+      </navigator>
+   </view>
+   <view class='cu-tabbar-height'></view>
+</view>

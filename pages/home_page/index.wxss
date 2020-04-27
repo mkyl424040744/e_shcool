@@ -1,0 +1,80 @@
+
+.hp_img {
+   width: 100%;
+   
+}
+
+.sm_container {
+   display: flex;
+   flex-direction: column;
+   margin-left: 35rpx;
+   margin-top: 30rpx;
+   padding: 20rpx;
+   width: 320rpx;
+   float: left;
+   text-align: center;
+   border-radius: 16rpx;
+   box-shadow: 1rpx 1rpx 10rpx 5rpx #ccc;
+}
+
+.sq_title {
+   font-size: 34rpx;
+   font-weight: 600;
+   margin-top: 5rpx;
+   color: #333;
+}
+
+.sq_details {
+   margin-top: 10rpx;
+   font-size: 28rpx;
+   color: #aaa;
+}
+
+.bottom_m{
+   margin-bottom: 20rpx;
+}
+
+/* 图标： */
+.myicon{
+  width: 40px;
+  height: 40px;
+}
+/* 图标外层： */
+.ivew{
+  justify-content: center;
+  align-items: center;
+}
+
+ .iconfont {
+   font-family: "iconfont" !important;
+   font-size: 40px;
+   font-style: normal;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ .icon-CALL:before {
+   content: "\e602";
+ }
+ 
+ .icon-yaowan:before {
+   content: "\e601";
+ }
+ 
+ .icon-yisheng:before {
+   content: "\e603";
+ }
+ 
+ .icon-yaopian:before {
+   content: "\e606";
+ }
+ 
+ .icon-jiancha:before {
+   content: "\e608";
+ }
+ 
+ .icon-xinyika:before {
+   content: "\e60a";
+ }
+ 
+ 
