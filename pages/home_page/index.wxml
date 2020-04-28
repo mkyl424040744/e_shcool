@@ -1,7 +1,7 @@
-<view class="" style="background-image: url(../../images/b1.jpg);background-size:100% 100%;">
+<view style="background-image: url(../../images/b2.jpg);background-size:100% 100%;">
    <!-- <image class="hp_img" src="{{hp_img}}" /> -->
    <view class="cu-bar search">
-      <view class="search-form round">
+      <view class="search-form round" style="margin-top:200rpx;">
          <text class="cuIcon-search"></text>
          <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput="searchIcon"></input>
       </view>
