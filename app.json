@@ -1,17 +1,19 @@
 {
    "pages": [
       "pages/home_page/index",
+      "pages/formation_page/index",
+      "pages/personal/index",
       "pages/reimbursement_page/index",
       "pages/medicineshop_page/index",
-      "pages/formation_page/index",
       "pages/index/index",
       "pages/logs/logs",
-      "pages/personal/index"
+      "pages/healthScience_page/index",
+      "pages/formation_page/line_up/index"
    ],
    "window": {
       "backgroundTextStyle": "light",
       "navigationBarBackgroundColor": "#e54d42",
-      "navigationBarTitleText": "WeChat",
+      "navigationBarTitleText": "e校康",
       "navigationBarTextStyle": "white"
    },
    "usingComponents": {

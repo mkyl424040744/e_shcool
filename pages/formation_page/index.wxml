@@ -1,23 +1,24 @@
-<!--pages/formation_page/index.wxml-->
-<view class="grid  bg-white padding-sm">
-    <view class="padding-sm" style="width: 100%;">
-      <view class="bg-red padding radius light" >
-        <view class="flex solid-bottom  justify-between">
-            <view class=" margin-xs radius">
-                <view class="text-lg">广商医务室</view>  
-                <view class="margin-top-sm text-lg">现排队：3人</view>
-                <view class=" text-Abc">预计用时：15分钟</view>
-            </view>
-            <view class="  margin-xs radius" >
-                <view class="margin-tb-sm text-center"  >
-                    <button style="width: 80px;" class="cu-btn  bg-red {{shadow?'shadow':''}}">排队</button>
+<block wx:for="{{ftData}}" wx:key="item">
+   <view class="grid  bg-white padding-sm">
+      <view class="padding-sm" style="width: 100%;padding-bottom: 0rpx;">
+         <view class="bg-{{item.color}} padding radius light">
+            <view class="flex solid-bottom  justify-between">
+               <view class=" margin-xs radius">
+                  <view class="text-lg">{{item.title}}</view>
+                  <view class="margin-top-sm text-lg">现排队：{{item.nowLine}}人</view>
+                  <view class=" text-Abc">预计用时：{{item.expect}}</view>
+               </view>
+               <view class="  margin-xs radius">
+                  <view class="margin-tb-sm text-center">
+                     <button style="width: 80px;" class="cu-btn  bg-{{item.color}} {{shadow?'shadow':''}}" id="{{item.id}}" catchtap="onclick">排队</button>
                   </view>
+               </view>
             </view>
-          </view>
+         </view>
       </view>
-    </view>
-</view>
-<view class="grid  bg-white padding-sm">
+   </view>
+</block>
+<!-- <view class="grid  bg-white padding-sm">
     <view class="padding-sm" style="width: 100%;">
       <view class="bg-olive padding radius light" >
         <view class="flex solid-bottom  justify-between">
@@ -52,4 +53,4 @@
           </view>
       </view>
     </view>
-</view>
+</view> -->

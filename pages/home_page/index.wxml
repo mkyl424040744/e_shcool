@@ -1,13 +1,14 @@
-<view style="background-image: url(../../images/b2.jpg);background-size:100% 100%;">
+<view class="b_container" style="background-image: url(../../images/b2.jpg);background-size:100% 450rpx;background-repeat:no-repeat;">
    <!-- <image class="hp_img" src="{{hp_img}}" /> -->
+   <view></view>
    <view class="cu-bar search">
-      <view class="search-form round" style="margin-top:200rpx;">
+      <view class="search-form round" style="margin-top:270rpx;">
          <text class="cuIcon-search"></text>
          <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput="searchIcon"></input>
       </view>
    </view>
    <view class='nav-list bottom_m '>
-      <navigator open-type="square_data" url="" class="nav-li bg-white sm_container" wx:for="{{square_data}}" wx:key="item">
+      <navigator url="../{{item.url}}/index" class="nav-li bg-white sm_container" wx:for="{{square_data}}" wx:key="item">
          <view class="ivew">
             <image src="{{item.imageUrl}}" class="myicon">  </image> 
          </view> 

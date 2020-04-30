@@ -1,1 +1,20 @@
-/* pages/personal/index.wxss */
+.scontainer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.imgHead {
+   overflow:hidden;
+   width: 140rpx;
+   height: 140rpx;
+   border-radius: 50%;
+   margin-top: 40rpx;
+   margin-bottom: 20rpx;
+}
+
+.textc{
+   font-size: 30rpx;
+   font-weight: 600;
+   margin-bottom: 18rpx;
+}

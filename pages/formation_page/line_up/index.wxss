@@ -1,0 +1,22 @@
+
+.ragr{
+   display: flex;
+   flex-direction: row;
+}
+
+.sexgup{
+   margin-left: 20rpx;
+}
+
+.sextext{
+   margin-left: 10rpx;
+}
+
+.sexradio{
+   margin-left: 10rpx;
+}
+
+.buxs{
+   position: fixed;
+   right: 30rpx;
+}

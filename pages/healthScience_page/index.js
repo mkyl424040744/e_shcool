@@ -1,17 +1,18 @@
-var data = require('../../data/data.js')
+var hs_data = require('../../data/data.js')
 
+// pages/healthScience_page/index.js
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-
+      TabCur: 0,
    },
-   onclick: function (e) {
-      console.log(e.currentTarget.id);
-      wx.navigateTo({
-         url: './line_up/index?id=' + e.currentTarget.id,
+   tabSelect(e) {
+      this.setData({
+         TabCur: e.currentTarget.dataset.id,
+         scrollLeft: (e.currentTarget.dataset.id - 1) * 60
       })
    },
    /**
@@ -19,7 +20,8 @@ Page({
     */
    onLoad: function (options) {
       this.setData({
-         ftData: data.ftData
+         hs_navigation: hs_data.hsData,
+         hsCard: hs_data.hsCard
       })
    },
 

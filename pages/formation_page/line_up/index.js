@@ -1,5 +1,4 @@
-var data = require('../../data/data.js')
-
+// pages/formation_page/line_up/index.js
 Page({
 
    /**
@@ -8,18 +7,14 @@ Page({
    data: {
 
    },
-   onclick: function (e) {
-      console.log(e.currentTarget.id);
-      wx.navigateTo({
-         url: './line_up/index?id=' + e.currentTarget.id,
-      })
-   },
+
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
-      this.setData({
-         ftData: data.ftData
+      console.log(options.id)
+      wx.setNavigationBarTitle({
+         title:'排队'
       })
    },
 

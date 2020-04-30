@@ -1,2 +1,12 @@
-<!--pages/personal/index.wxml-->
-<text>pages/personal/index.wxml</text>
+<view>
+   <view class="scontainer">
+      <view class="imgHead">
+         <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="textc">
+      <open-data type="userNickName"></open-data>
+      </view>
+   </view>
+   <van-cell title="个人设置" is-link url="" />
+   <van-cell title="医保卡绑定" is-link url="" />
+</view>
