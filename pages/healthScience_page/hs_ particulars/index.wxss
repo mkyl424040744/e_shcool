@@ -1,0 +1,13 @@
+.hspcontainer{
+   display: flex;
+   flex-direction: column;
+}
+
+.imgs{
+   width: 100%;
+}
+
+.textsy{
+   letter-spacing:1rpx;
+   line-height: 40rpx;
+}

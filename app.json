@@ -1,13 +1,14 @@
 {
    "pages": [
       "pages/home_page/index",
+      "pages/healthScience_page/hs_ particulars/index",
+      "pages/healthScience_page/index",
       "pages/formation_page/index",
       "pages/personal/index",
       "pages/reimbursement_page/index",
       "pages/medicineshop_page/index",
       "pages/index/index",
       "pages/logs/logs",
-      "pages/healthScience_page/index",
       "pages/formation_page/line_up/index"
    ],
    "window": {

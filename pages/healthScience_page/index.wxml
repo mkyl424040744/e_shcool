@@ -4,8 +4,8 @@
    </view>
 </scroll-view>
 <block wx:for='{{hsCard}}' wx:key='item'>
-<view class="cu-card article">
-   <view class="cu-item shadow" style="margin-bottom: 0rpx;">
+<view class="cu-card article" hover-class='wsui-btn__hover_list' bind:tap="onPostTap" data-postid="{{item.id}}">
+   <view class="cu-item shadow" style="margin: 1rpx;">
       <view class="title">
          <view class="text-cut">{{item.title}}</view>
       </view>

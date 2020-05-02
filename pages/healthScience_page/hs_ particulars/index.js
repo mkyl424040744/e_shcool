@@ -1,34 +1,21 @@
-var hs_data = require('../../data/data.js')
+var hs_data = require('../../../data/data.js')
 
-// pages/healthScience_page/index.js
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      TabCur: 0,
+
    },
-   tabSelect(e) {
-      this.setData({
-         TabCur: e.currentTarget.dataset.id,
-         scrollLeft: (e.currentTarget.dataset.id - 1) * 60
-      })
-   },
-   onPostTap(e){
-      console.log(e.currentTarget.dataset.postid)
-      let postid = e.currentTarget.dataset.postid;
-      wx.navigateTo({
-         url: 'hs_ particulars/index?id=' + postid,
-      })
-   },
+
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
+      console.log(options.id)
       this.setData({
-         hs_navigation: hs_data.hsData,
-         hsCard: hs_data.hsCard
+         hsp_data: hs_data.hsCard[options.id]
       })
    },
 

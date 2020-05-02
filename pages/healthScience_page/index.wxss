@@ -1,3 +1,8 @@
 page {
   background-color: #eee;
 }
+
+.wsui-btn__hover_list {
+  opacity: 0.9;
+  background: #f4f4f4;
+}

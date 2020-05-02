@@ -28,7 +28,7 @@ var data = [{
    details: "10分钟内专家回电",
    imageUrl: "../../images/yaowan.png",
    id: 3,
-   url: ""
+   url: "medicineshop_page"
 }, {
    name: "健康科普",
    details: "10分钟内专家回电",
