@@ -8,9 +8,12 @@
                   <view class="margin-top-sm text-lg">现排队：{{item.nowLine}}人</view>
                   <view class=" text-Abc">预计用时：{{item.expect}}</view>
                </view>
-               <view class="  margin-xs radius">
+               <view class="margin-xs radius">
+                  <button style="width: 160rpx;" class="cu-btn bg-tm {{shadow?'shadow':''}}">
+                     <text class="cuIcon-locationfill lg text-{{item.color}}"></text>
+                  </button>
                   <view class="margin-tb-sm text-center">
-                     <button style="width: 80px;" class="cu-btn  bg-{{item.color}} {{shadow?'shadow':''}}" id="{{item.id}}" catchtap="onclick">排队</button>
+                     <button style="width: 160rpx;" class="cu-btn  bg-{{item.color}} {{shadow?'shadow':''}}" id="{{item.id}}" catchtap="onclick">排队</button>
                   </view>
                </view>
             </view>
