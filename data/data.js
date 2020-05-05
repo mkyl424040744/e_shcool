@@ -106,10 +106,51 @@ var formation_data = [{
    expect: "15分钟",
    color: "blue"
 }]
+var sidebar = [{
+   name: '推荐分类'
+}, {
+   name: '男科用药'
+}, {
+   name: '女科用药'
+}, {
+   name: '滋补保健'
+}, {
+   name: '神经系统'
+},]
+var drug = [{
+   img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1482058620,2144351281&fm=26&gp=0.jpg',
+   name: '感冒发烧'
+}, {
+   img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588696479327&di=d798d549ee012d095ca63c11e227e473&imgtype=0&src=http%3A%2F%2Fi.mmyuer.com%2Fuploads%2Fallimg%2F190109%2F19-1Z1091H925K4.jpg',
+   name: '口腔疾病'
+}, {
+   img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588696446815&di=41a48ba22270a6e702bae510408ecbee&imgtype=0&src=http%3A%2F%2Fimg.258weishi.com%2Fshangpu%2F20141105%2F023d542f4d683e2588350f18f7ba0968.jpg',
+   name: '抗菌消炎'
+}, {
+   img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3918738017,434212196&fm=26&gp=0.jpg',
+   name: '炎性肠病'
+}, {
+   img: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3013697353,696128686&fm=26&gp=0.jpg',
+   name: '哮喘用药'
+}, {
+   img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2754729767,2078204756&fm=26&gp=0.jpg',
+   name: '跌打扭伤'
+}, {
+   img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3876759182,953774698&fm=26&gp=0.jpg',
+   name: '血压计'
+}, {
+   img: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1909377048,733870920&fm=26&gp=0.jpg',
+   name: '脱发白发'
+}, {
+   img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588696335959&di=e12564bb7ee59c928082e4f74c22e77e&imgtype=0&src=http%3A%2F%2Fp3.pccoo.cn%2Fbbs%2F20150922%2F2015092211025076742003.jpg',
+   name: '成人用品'
+}]
 
 module.exports = {
    data: data,
    hsData: health_science_data,
    hsCard: health_science_card,
-   ftData: formation_data
+   ftData: formation_data,
+   sidebar: sidebar,
+   drug: drug
 }

@@ -1,2 +1,23 @@
-<!--pages/medicineshop_page/index.wxml-->
-<text>pages/medicineshop_page/index.wxml</text>
+<view>
+   <view class="cu-bar bg-white search fixed" style="">
+      <view class="search-form round">
+         <text class="cuIcon-search"></text>
+         <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput=""></input>
+      </view>
+   </view>
+   <view class="sidebarbox" style="margin-top:100rpx;">
+      <van-sidebar active-key="{{ activeKey }}">
+         <block wx:for="{{sidebar}}" wx:key="item">
+            <van-sidebar-item title="{{item.name}}" />
+         </block>
+      </van-sidebar>
+      <view class="padding-sm">
+         <block wx:for="{{drug}}" wx:key="item">
+            <view class="drugbox margin-sm" style="margin-left:35rpx;">
+               <image class="imgdrug" src="{{item.img}}"></image>
+               <text class="textdrug">{{item.name}}</text>
+            </view>
+         </block>
+      </view>
+   </view>
+</view>
