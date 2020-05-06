@@ -134,7 +134,18 @@ var drug = [{
    name: '哮喘用药'
 }, {
    img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2754729767,2078204756&fm=26&gp=0.jpg',
-   name: '跌打扭伤'
+   name: '跌打扭伤',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   specification: '10克x20袋/袋',
+   disease: '扁桃体炎',
+   sales_volume: '150袋',
+   inventory: '150袋',
+   label1: '中药',
+   label2: '医保',
+   indications: '清热解毒，凉血利咽，用于肺热所致的口咽干燥，急性扁桃体等。',
+   usage: '清热解毒，凉血利咽，用于肺热所致的口咽干燥，急性扁桃体等。',
+   taboo: '清热解毒，凉血利咽，用于肺热所致的口咽干燥，急性扁桃体等。'
 }, {
    img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3876759182,953774698&fm=26&gp=0.jpg',
    name: '血压计'

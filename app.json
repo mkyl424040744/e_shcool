@@ -1,5 +1,6 @@
 {
    "pages": [
+      "pages/medicineshop_page/drug_particulars/index",
       "pages/medicineshop_page/index",
       "pages/home_page/index",
       "pages/healthScience_page/hs_ particulars/index",

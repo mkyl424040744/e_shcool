@@ -1,0 +1,26 @@
+<view class="mainbox padding-sm">
+   <view class="panelbox1 padding-sm">
+      <image class="pb1" src="{{dgdata.img}}"></image>
+      <view class="pd1rbox">
+         <text class="text-bold text-lg">{{dgdata.drug_name}}</text>
+         <view class="pd1-rbox">
+            <text class="text-lg text-red">￥{{dgdata.price}}</text>
+            <text class="text-sm text-gray">参考价格</text>
+         </view>
+         <text class="pd1-text" style="margin-top:10rpx;">规格：{{dgdata.specification}}</text>
+         <text class="pd1-text">病症：{{dgdata.disease}}</text>
+         <text class="pd1-text">销量：{{dgdata.sales_volume}}</text>
+         <text class="pd1-text">库存：{{dgdata.inventory}}</text>
+         <view>
+            <text class="cu-tag bg-green light sm round">{{dgdata.label1}}</text>
+            <text class="cu-tag bg-green light sm round">{{dgdata.label2}}</text>
+         </view>
+      </view>
+   </view>
+   <view class="panelbox2 margin-top-sm">
+      <text class="text-center text-bold ">药品说明书</text>
+      <text class="margin-top-sm">【主治功能】{{dgdata.indications}}</text>
+      <text class="margin-top-sm">【用法用量】{{dgdata.usage}}</text>
+      <text class="margin-top-sm">【用禁忌症】{{dgdata.taboo}}</text>
+   </view>
+</view>
