@@ -1,23 +1,34 @@
-<view>
-   <view class="cu-bar bg-white search fixed" style="">
-      <view class="search-form round">
-         <text class="cuIcon-search"></text>
-         <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput=""></input>
-      </view>
+<view class="cu-bar bg-white search fixed" style="">
+   <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput=""></input>
    </view>
-   <view class="sidebarbox" style="margin-top:100rpx;">
+</view>
+<view class="sidebarbox">
+   <scroll-view class="VerticalNav nav" scroll-with-animation scroll-y style="margin-top:100rpx;">
       <van-sidebar active-key="{{ activeKey }}">
-         <block wx:for="{{sidebar}}" wx:key="item">
+         <block  wx:for="{{sidebar}}" wx:key="item">
             <van-sidebar-item title="{{item.name}}" />
          </block>
       </van-sidebar>
+   </scroll-view>
+   <scroll-view class="VerticalMain" scroll-with-animation scroll-y style="margin-top:100rpx;">
       <view class="padding-sm">
          <block wx:for="{{drug}}" wx:key="item">
-            <view class="drugbox margin-sm" style="margin-left:35rpx;">
+            <view class="drugbox margin-sm" style="">
                <image class="imgdrug" src="{{item.img}}"></image>
-               <text class="textdrug">{{item.name}}</text>
+               <view class="panel1box margin-left-sm">
+                  <text class="text-bold">{{item.drug_name}}</text>
+                  <text class="text-gray text-sm margin-top-xs">销量：{{item.sales_volume}}</text>
+                  <view class="margin-top-lg drugbox">
+                     <text class="text-red text-lg">￥{{item.price}}</text>
+                     <view class="text-xl">
+                        <text class="cuIcon-roundaddfill text-green pd1icon"></text>
+                     </view>
+                  </view>
+               </view>
             </view>
          </block>
       </view>
-   </view>
+   </scroll-view>
 </view>

@@ -119,19 +119,34 @@ var sidebar = [{
 },]
 var drug = [{
    img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1482058620,2144351281&fm=26&gp=0.jpg',
-   name: '感冒发烧'
+   name: '感冒发烧',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }, {
    img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588696479327&di=d798d549ee012d095ca63c11e227e473&imgtype=0&src=http%3A%2F%2Fi.mmyuer.com%2Fuploads%2Fallimg%2F190109%2F19-1Z1091H925K4.jpg',
-   name: '口腔疾病'
+   name: '口腔疾病',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }, {
    img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588696446815&di=41a48ba22270a6e702bae510408ecbee&imgtype=0&src=http%3A%2F%2Fimg.258weishi.com%2Fshangpu%2F20141105%2F023d542f4d683e2588350f18f7ba0968.jpg',
-   name: '抗菌消炎'
+   name: '抗菌消炎',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }, {
    img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3918738017,434212196&fm=26&gp=0.jpg',
-   name: '炎性肠病'
+   name: '炎性肠病',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }, {
    img: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3013697353,696128686&fm=26&gp=0.jpg',
-   name: '哮喘用药'
+   name: '哮喘用药',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }, {
    img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2754729767,2078204756&fm=26&gp=0.jpg',
    name: '跌打扭伤',
@@ -148,13 +163,22 @@ var drug = [{
    taboo: '清热解毒，凉血利咽，用于肺热所致的口咽干燥，急性扁桃体等。'
 }, {
    img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3876759182,953774698&fm=26&gp=0.jpg',
-   name: '血压计'
+   name: '血压计',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }, {
    img: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1909377048,733870920&fm=26&gp=0.jpg',
-   name: '脱发白发'
+   name: '脱发白发',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }, {
    img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588696335959&di=e12564bb7ee59c928082e4f74c22e77e&imgtype=0&src=http%3A%2F%2Fp3.pccoo.cn%2Fbbs%2F20150922%2F2015092211025076742003.jpg',
-   name: '成人用品'
+   name: '成人用品',
+   drug_name: '小儿感冒颗粒',
+   price: 14.16,
+   sales_volume: '150袋',
 }]
 
 module.exports = {

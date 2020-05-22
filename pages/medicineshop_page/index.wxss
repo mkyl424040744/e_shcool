@@ -1,16 +1,23 @@
 .sidebarbox{
    display: flex;
-   flex-direction: row;
 }
 
 .drugbox{
    display: flex;
-   flex-direction: column;
-   float: left;
+   flex-direction: row;
 }
 
 .imgdrug{
-   width: 120rpx;
-   height: 100rpx;
+   width: 180rpx;
+   height: 150rpx;
 }
-
+.panel1box{
+   display: flex;
+   flex-direction: column;
+}
+.pd1icon{
+   margin-left: 165rpx;
+}
+.VerticalNav{
+   position: relative;
+}
