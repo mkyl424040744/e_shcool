@@ -1,23 +1,54 @@
-.sidebarbox{
-   display: flex;
+.scroll {
+  width: 177rpx;
+  text-align: center;
 }
 
-.drugbox{
-   display: flex;
-   flex-direction: row;
+.scroll view {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #ebebeb;
+  background: #fafafa;
+}
+
+.scroll .act {
+   background:#ffffff;
+   border-left: 10rpx solid #e54d42;
+}
+
+.content {
+  width: 538rpx;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 0 20rpx 0 20rpx;
+  box-sizing: border-box;
+}
+
+.drugbox {
+  height: 160rpx;
+  background: white;
+  margin-top: 15rpx;
+  display: flex;
+  flex-direction: row;
 }
 
 .imgdrug{
    width: 180rpx;
-   height: 150rpx;
+   height: 160rpx;
 }
+
 .panel1box{
    display: flex;
    flex-direction: column;
 }
 .pd1icon{
-   margin-left: 165rpx;
+   margin-left: 175rpx;
 }
-.VerticalNav{
-   position: relative;
+.drugboxr{
+   display: flex;
+   flex-direction: row;
+}
+.wsui-btn__hover_list {
+  opacity: 0.9;
+  background: #f4f4f4;
 }

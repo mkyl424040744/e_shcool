@@ -1,23 +1,44 @@
-let data = require("../../data/data.js");
-let sidebar = data.sidebar;
-let drug = data.drug;
-// pages/formation_page/line_up/index.js
+// pages/ceso/index.js
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      activeKey:0,
+      nevid: 0
    },
-
+   scroll: function (e) {
+      let id = e.currentTarget.dataset.id
+      this.setData({
+         nevid: id,
+         content: this.data.left[id].medicine_set
+      })
+   },
+   onclick:function(e){
+      let id = e.currentTarget.dataset.id
+      wx.navigateTo({
+         url: 'drug_particulars/index?id='+id,
+      })
+   },
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
       this.setData({
-         sidebar: sidebar,
-         drug: drug
+         height: wx.getSystemInfoSync().windowHeight,　　//屏幕高度
+         width: wx.getSystemInfoSync().windowWidth　　//屏幕宽度
+      })
+      wx.request({
+         url: 'http://152.32.226.171:8000/api/medicines/',
+         method: 'GET',
+         data: {},
+         success: res => {
+            console.log(res.data)
+            this.setData({
+               left: res.data,
+               content: res.data[this.data.nevid].medicine_set
+            })
+         }
       })
    },
 

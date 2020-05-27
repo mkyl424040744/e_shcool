@@ -4,6 +4,6 @@
       <view class="cu-tag bg-red light sm round">{{hsp_data.label1}}</view>
       <view class="cu-tag bg-green light sm round">{{hsp_data.label2}}</view>
    </view>
-   <image class="padding-sm imgs" src="{{hsp_data.logo}}"></image>
+   <image class="padding-sm imgs" src="{{hsp_data.main_image}}"></image>
    <text class="textsy text-lg padding-sm">{{hsp_data.content}}</text>
 </view>

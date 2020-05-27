@@ -1,5 +1,6 @@
 var hs_data = require('../../../data/data.js')
-
+import { HTTP } from '../../../utils/http.js'
+let http = new HTTP()
 Page({
 
    /**
@@ -14,8 +15,16 @@ Page({
     */
    onLoad: function (options) {
       console.log(options.id)
-      this.setData({
-         hsp_data: hs_data.hsCard[options.id]
+      http.request({
+         url: 'api/articles/' + options.id,
+         method: 'GET',
+         data: {},
+         success: res => {
+            console.log(res)
+            this.setData({
+               hsp_data: res
+            })
+         }
       })
    },
 

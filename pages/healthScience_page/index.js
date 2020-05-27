@@ -1,4 +1,6 @@
 var hs_data = require('../../data/data.js')
+import { HTTP } from '../../utils/http.js'
+let http = new HTTP()
 
 // pages/healthScience_page/index.js
 Page({
@@ -26,9 +28,26 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
-      this.setData({
-         hs_navigation: hs_data.hsData,
-         hsCard: hs_data.hsCard
+      http.request({
+         url:'api/article_categories/',
+         method: 'GET',
+         data:{},
+         success:res => {
+            this.setData({
+               hs_navigation:res
+            })
+         }
+      })
+      http.request({
+         url: 'api/articles/',
+         method: 'GET',
+         data: {},
+         success: res => {
+            console.log(res)
+            this.setData({
+               hsCard: res.results
+            })
+         }
       })
    },
 

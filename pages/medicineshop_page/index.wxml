@@ -4,31 +4,26 @@
       <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput=""></input>
    </view>
 </view>
-<view class="sidebarbox">
-   <scroll-view class="VerticalNav nav" scroll-with-animation scroll-y style="margin-top:100rpx;">
-      <van-sidebar active-key="{{ activeKey }}">
-         <block  wx:for="{{sidebar}}" wx:key="item">
-            <van-sidebar-item title="{{item.name}}" />
-         </block>
-      </van-sidebar>
+<view style="">
+   <scroll-view class="scroll" style="margin-top:100rpx;height: {{height*2-100}}rpx;" scroll-y>
+      <view class="{{index==nevid?'act':''}}" wx:for="{{ left }}" wx:key="item" bindtap="scroll" data-id="{{index}}">{{ item.name }}</view>
    </scroll-view>
-   <scroll-view class="VerticalMain" scroll-with-animation scroll-y style="margin-top:100rpx;">
-      <view class="padding-sm">
-         <block wx:for="{{drug}}" wx:key="item">
-            <view class="drugbox margin-sm" style="">
-               <image class="imgdrug" src="{{item.img}}"></image>
-               <view class="panel1box margin-left-sm">
-                  <text class="text-bold">{{item.drug_name}}</text>
-                  <text class="text-gray text-sm margin-top-xs">销量：{{item.sales_volume}}</text>
-                  <view class="margin-top-lg drugbox">
-                     <text class="text-red text-lg">￥{{item.price}}</text>
+
+   <scroll-view class="content" style="margin-top:100rpx;height: {{height*2-100}}rpx;" scroll-y scroll-with-animation>
+      <view wx:for="{{ content }}" wx:key="item">
+         <view class="drugbox" hover-class='wsui-btn__hover_list' bindtap="onclick" data-id='{{item.id}}'>
+            <image class="imgdrug" src="{{item.image}}"></image>
+            <view class="panel1box padding-xs">
+                  <text class="text-bold">{{item.name}}</text>
+                  <text class="text-gray text-sm margin-top-xs">销量：{{item.id^2}}</text>
+                  <view class="margin-top-xs drugboxr">
+                     <text class="text-red text-lg">￥{{item.normal_price}}</text>
                      <view class="text-xl">
                         <text class="cuIcon-roundaddfill text-green pd1icon"></text>
                      </view>
                   </view>
                </view>
-            </view>
-         </block>
+         </view>
       </view>
    </scroll-view>
 </view>

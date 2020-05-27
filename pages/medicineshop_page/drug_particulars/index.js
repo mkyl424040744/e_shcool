@@ -13,6 +13,15 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
+      console.log(options)
+      wx.request({
+         url: 'http://152.32.226.171:8000/api/medicines/' + options.id,
+         method: 'GET',
+         data: {},
+         success: res => {
+            console.log(res.data)
+         }
+      })
       this.setData({
          dgdata: dgdata[5]
       })
