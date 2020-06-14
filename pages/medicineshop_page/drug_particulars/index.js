@@ -1,5 +1,6 @@
 let data = require("../../../data/data.js");
 let dgdata = data.drug
+let wxParser = require('../../../wxParser/index.js');
 Page({
 
    /**
@@ -14,16 +15,30 @@ Page({
     */
    onLoad: function (options) {
       console.log(options)
+      let that = this
       wx.request({
          url: 'http://152.32.226.171:8000/api/medicines/' + options.id,
          method: 'GET',
          data: {},
          success: res => {
             console.log(res.data)
+            this.setData({
+               dgdata: res.data
+            })
+            wxParser.parse({
+               bind: 'richText',
+               html: res.data.description,
+               target: that,
+               enablePreviewImage: true, // 禁用图片预览功能
+               tapLink: (url) => { // 点击超链接时的回调函数
+                  // url 就是 HTML 富文本中 a 标签的 href 属性值
+                  // 这里可以自定义点击事件逻辑，比如页面跳转
+                  wx.navigateTo({
+                     url
+                  });
+               }
+            });
          }
-      })
-      this.setData({
-         dgdata: dgdata[5]
       })
    },
 

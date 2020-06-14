@@ -1,6 +1,7 @@
 var hs_data = require('../../../data/data.js')
 import { HTTP } from '../../../utils/http.js'
 let http = new HTTP()
+let wxParser = require('../../../wxParser/index.js');
 Page({
 
    /**
@@ -24,6 +25,19 @@ Page({
             this.setData({
                hsp_data: res
             })
+            wxParser.parse({
+               bind: 'richText',
+               html: res.content,
+               target: this,
+               enablePreviewImage: true, // 禁用图片预览功能
+               tapLink: (url) => { // 点击超链接时的回调函数
+                  // url 就是 HTML 富文本中 a 标签的 href 属性值
+                  // 这里可以自定义点击事件逻辑，比如页面跳转
+                  wx.navigateTo({
+                     url
+                  });
+               }
+            });
          }
       })
    },

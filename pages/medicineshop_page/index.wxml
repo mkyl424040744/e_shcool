@@ -15,7 +15,7 @@
             <image class="imgdrug" src="{{item.image}}"></image>
             <view class="panel1box padding-xs">
                   <text class="text-bold">{{item.name}}</text>
-                  <text class="text-gray text-sm margin-top-xs">销量：{{item.id^2}}</text>
+                  <text class="text-gray text-sm margin-top-xs">销量：{{item.sold_num}}</text>
                   <view class="margin-top-xs drugboxr">
                      <text class="text-red text-lg">￥{{item.normal_price}}</text>
                      <view class="text-xl">
