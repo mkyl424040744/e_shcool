@@ -1,0 +1,12 @@
+<view class="" hover-class="none" hover-stop-propagation="false" style="width: 100%; height: 100%;">
+   <map id="map" longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="13" show-location style="height:{{600}}rpx;width:{{width*2}}rpx"></map>
+   <view class="v padding-sm">
+      <text class="text-lg text-bold text-black">{{mdata.name}}</text>
+      <text class="margin-top-xs">营业时间：{{mdata.open_time}}~{{mdata.close_time}}</text>
+      <view class="h">
+         <image wx:for="{{mdata.images}}" wx:key="item" class="img margin-xs" src="{{item}}"></image>
+      </view>
+      <text class="text-bold">简介：</text>
+      <text class="margin-top-xs">{{mdata.description}}</text>
+   </view>
+</view>

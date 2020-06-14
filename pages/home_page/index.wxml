@@ -8,9 +8,9 @@
       </view>
    </view>
    <view class='nav-list bottom_m '>
-      <navigator url="../{{item.url}}/index" class="nav-li bg-white sm_container" wx:for="{{square_data}}" wx:key="item">
+      <navigator url="../{{item.url}}/index" class="nav-li bg-white sm_container" wx:for="{{square_data}}" wx:key="item" catchtap="urltiaoz" data-url="{{item.url}}">
          <view class="ivew">
-            <image src="{{item.imageUrl}}" class="myicon">  </image> 
+            <image src="{{item.imageUrl}}" class="myicon"></image> 
          </view> 
          <text class="sq_title">{{item.name}}</text>
          <text class="sq_details">{{item.details}}</text>

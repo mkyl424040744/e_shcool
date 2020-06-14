@@ -7,11 +7,25 @@ Page({
     */
    data: {
       hp_img: "../../images/b1.jpg",
+      flog: false
    },
    searchIcon: function (e) {
       console.log(e.detail.value)
    },
-
+   urltiaoz: function (e) {
+      // if()
+      console.log(e.currentTarget.dataset.url)
+      if (e.currentTarget.dataset.url == 'kjdh') {
+         wx.showModal({
+            title: '快捷电话',
+            content: '13129342567',
+            showCancel: false,
+            cancelColor: '#333',
+            confirmText: '确认',
+            confirmColor: '#405f80'
+         })
+      }
+   },
    /**
     * 生命周期函数--监听页面加载
     */

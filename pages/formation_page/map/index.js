@@ -1,37 +1,46 @@
-var data = require('../../data/data.js')
-
+// pages/formation_page/map/index.js
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      colors: ['red', 'olive','blue']
+
    },
-   mapclick: function (e) {
-      console.log(e.currentTarget.dataset.id);
-      wx.navigateTo({
-         url: './map/index?id=' + e.currentTarget.dataset.id,
-      })
-   },
-   onclick: function (e) {
-      console.log(e.currentTarget.id);
-      wx.navigateTo({
-         url: './line_up/index?id=' + e.currentTarget.id,
-      })
-   },
+
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
+      this.setData({
+         height: wx.getSystemInfoSync().windowHeight,　　//屏幕高度
+         width: wx.getSystemInfoSync().windowWidth　　//屏幕宽度
+      })
+      var that = this;
+      let id = options.id
       wx.request({
-         url: 'http://152.32.226.171:8000/queue/list/',
+         url: 'http://152.32.226.171:8000/api/addresses/' + id,
          method: 'GET',
          data: {},
          success: res => {
-            console.log(res.data.data)
-            this.setData({
-               ftData: res.data.data
+            let data = res.data
+            console.log(data)
+            that.setData({
+               mdata:res.data
+            })
+            wx.getLocation({
+               type: "wgs84",
+               success: function (res) {
+                  //console.log(res.latitude);
+                  that.setData({
+                     latitude: res.latitude,
+                     longitude: res.longitude,
+                     markers: [{
+                        latitude: data.lat,
+                        longitude: data.lng
+                     }]
+                  })
+               }
             })
          }
       })

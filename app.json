@@ -1,11 +1,12 @@
 {
    "pages": [
       "pages/home_page/index",
+      "pages/formation_page/index",
+      "pages/formation_page/map/index",
       "pages/medicineshop_page/index",
       "pages/medicineshop_page/drug_particulars/index",
       "pages/healthScience_page/hs_ particulars/index",
       "pages/healthScience_page/index",
-      "pages/formation_page/index",
       "pages/personal/index",
       "pages/reimbursement_page/index",
       "pages/index/index",
@@ -97,6 +98,11 @@
             "selectedIconPath": "images/personals.png"
          }
       ]
+   },
+   "permission": {
+      "scope.userLocation": {
+         "desc": "你的位置信息将用于小程序位置接口的效果展示"
+      }
    },
    "style": "v2",
    "sitemapLocation": "sitemap.json"

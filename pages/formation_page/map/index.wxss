@@ -1,0 +1,14 @@
+.v{
+   display: flex;
+   flex-direction: column;
+}
+
+.h{
+   display: flex;
+   flex-direction: row;
+}
+
+.img{
+   width: 160rpx;
+   height: 160rpx;
+}
