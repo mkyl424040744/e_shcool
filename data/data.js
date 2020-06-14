@@ -16,7 +16,7 @@ var data = [{
    details: "找名医 更准更放心",
    imageUrl: "../../images/yishen.png",
    id: 1,
-   url: ""
+      url: "condition_consulting"
 }, {
    name: "门诊队列",
    details: "10分钟内专家回电",
