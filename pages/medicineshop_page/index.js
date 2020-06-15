@@ -24,6 +24,7 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
+      
       this.setData({
          height: wx.getSystemInfoSync().windowHeight,　　//屏幕高度
          width: wx.getSystemInfoSync().windowWidth　　//屏幕宽度

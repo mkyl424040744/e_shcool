@@ -15,6 +15,9 @@ Page({
     */
    onLoad: function (options) {
       console.log(options)
+      wx.setNavigationBarTitle({
+         title: '药品详情'
+      })
       let that = this
       wx.request({
          url: 'http://152.32.226.171:8000/api/medicines/' + options.id,

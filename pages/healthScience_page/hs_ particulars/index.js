@@ -16,6 +16,9 @@ Page({
     */
    onLoad: function (options) {
       console.log(options.id)
+      wx.setNavigationBarTitle({
+         title: '文章详情'
+      })
       http.request({
          url: 'api/articles/' + options.id,
          method: 'GET',
