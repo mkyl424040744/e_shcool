@@ -10,23 +10,23 @@
    </view>
    <view class="cu-form-group">
       <view class="title">学院</view>
-      <input placeholder="请输入学院"></input>
+      <input placeholder="请输入学院" value="{{dictionaries['college']}}" bindinput="set_value" data-name="college"></input>
    </view>
    <view class="cu-form-group">
       <view class="title">年级</view>
-      <input placeholder="请输入年级"></input>
+      <input placeholder="请输入年级" value="{{dictionaries['grade']}}" bindinput="set_value" data-name="grade"></input>
    </view>
    <view class="cu-form-group">
       <view class="title">班级</view>
-      <input placeholder="请输入班级"></input>
+      <input placeholder="请输入班级" value="{{dictionaries['class']}}" bindinput="set_value" data-name="class"></input>
    </view>
    <view class="cu-form-group">
       <view class="title">学号</view>
-      <input placeholder="请输入学号"></input>
+      <input placeholder="请输入学号" value="{{dictionaries['number']}}" bindinput="set_value" data-name="number"></input>
    </view>
    <view class="cu-form-group">
       <view class="title">姓名</view>
-      <input placeholder="请输入姓名"></input>
+      <input placeholder="请输入姓名" value="{{dictionaries['name']}}" bindinput="set_value" data-name="name"></input>
    </view>
    <view class="cu-form-group">
       <view class="title">性别</view>
@@ -34,22 +34,22 @@
          <radio-group class="ragr">
             <view class="sexgup">
                <text class="sextext">男生</text>
-               <radio checked class="red sexradio"></radio>
+               <radio checked="{{dictionaries['sex']==='男生'?true:false}}" class="red sexradio"></radio>
             </view>
             <view class="sexgup">
                <text class="sextex">女生</text>
-               <radio class="red sexradio"></radio>
+               <radio checked="{{dictionaries['sex']==='女生'?true:false}}" class="red sexradio"></radio>
             </view>
          </radio-group>
       </view>
    </view>
    <view class="cu-form-group">
       <view class="title">宿舍</view>
-      <input placeholder="请输入宿舍号"></input>
+      <input placeholder="请输入宿舍号" value="{{dictionaries['dorm']}}" bindinput="set_value" data-name="dorm"></input>
    </view>
    <view class="cu-form-group">
       <view class="title">手机号</view>
-      <input placeholder="请输入手机号"></input>
+      <input placeholder="请输入手机号" value="{{dictionaries['phone']}}" bindinput="set_value" data-name="phone"></input>
    </view>
    <view class="buxs">
       <button class="cu-btn bg-red" style="width:130rpx;">确认</button>

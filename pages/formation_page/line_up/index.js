@@ -5,9 +5,35 @@ Page({
     * 页面的初始数据
     */
    data: {
-
+      dictionaries: {
+         'college': '',
+         'grade': '',
+         'class': '',
+         'number': '',
+         'sex': '男生',
+         'name': '',
+         'dorm': '',
+         'phone': ''
+      }
    },
-
+   set_value: function (e) {
+      let newdi = this.data.dictionaries
+      // console.log(e.currentTarget.dataset.name)
+      newdi[e.currentTarget.dataset.name] = e.detail.value
+      this.setData({
+         dictionaries: newdi
+      })
+      // console.log(this.data.dictionaries)
+   },
+   setsex: function (e) {
+      // console.log(e.detail.value)
+      let newdi = this.data.dictionaries
+      newdi['sex'] = e.detail.value
+      this.setData({
+         dictionaries: newdi
+      })
+      // console.log(this.data.dictionaries)
+   },
    /**
     * 生命周期函数--监听页面加载
     */
@@ -16,6 +42,13 @@ Page({
       wx.setNavigationBarTitle({
          title:'排队'
       })
+      var p_i = wx.getStorageSync('prestored_information');
+      // console.log(p_i)
+      if (p_i) {
+         this.setData({
+            dictionaries: p_i
+         })
+      }
    },
 
    /**
