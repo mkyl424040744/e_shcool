@@ -7,6 +7,6 @@
       <open-data type="userNickName"></open-data>
       </view>
    </view>
-   <van-cell title="个人设置" is-link url="" />
+   <van-cell title="个人设置" is-link url="./set/index" />
    <van-cell title="医保卡绑定" is-link url="" />
 </view>

@@ -1,6 +1,7 @@
 {
    "pages": [
       "pages/home_page/index",
+      "pages/personal/set/index",
       "pages/formation_page/index",
       "pages/formation_page/map/index",
       "pages/medicineshop_page/index",
