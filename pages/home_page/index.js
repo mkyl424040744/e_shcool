@@ -19,13 +19,22 @@ Page({
       if (e.currentTarget.dataset.url == 'kjdh') {
          wx.showModal({
             title: '快捷电话',
-            content: '13129342567',
-            showCancel: false,
+            content: '0755-66635068',
+            showCancel: true,
             cancelColor: '#333',
-            confirmText: '确认',
-            confirmColor: '#405f80'
+            confirmText: '拨打',
+            confirmColor: '#405f80',
+            success: function (res) {
+               // console.log(res)
+               if (res.confirm) {
+                  wx.makePhoneCall({
+                     phoneNumber: '0755-66635068',
+                  })
+               }
+            }
          })
       }
+
    },
    /**
     * 生命周期函数--监听页面加载

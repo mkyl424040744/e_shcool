@@ -66,27 +66,35 @@ Page({
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
-      console.log(options.id)
+      console.log(options)
+      let data = options
       this.setData({
-         id: options.id
+         id: data.id,
+         name: data.name
       })
       wx.setNavigationBarTitle({
          title:'排队'
       })
-      var p_i = wx.getStorageSync('prestored_information');
-      // console.log(p_i)
-      if (p_i) {
-         this.setData({
-            dictionaries: p_i
-         })
-      }
+      
    },
 
    /**
     * 生命周期函数--监听页面初次渲染完成
     */
    onReady: function () {
-
+      var p_i = wx.getStorageSync('prestored_information');
+      // console.log(p_i)
+      if (p_i) {
+         this.setData({
+            dictionaries: p_i
+         })
+      } else {
+         wx.showToast({
+            title: '可到个人设置信息',
+            icon: "none",
+            duration: 1800,
+         })
+      }
    },
 
    /**

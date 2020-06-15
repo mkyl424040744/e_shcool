@@ -2,7 +2,7 @@
    <view class="cu-bar bg-white solid-bottom">
       <view class='action'>
          <text class='cuIcon-titles text-red'></text>
-         <text>广商医务室</text>
+         <text>{{name}}</text>
       </view>
       <view class='action'>
          <text class='cuIcon-like text-red'></text>

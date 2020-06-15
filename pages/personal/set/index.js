@@ -36,7 +36,15 @@ Page({
    },
    save: function () {
       wx.setStorageSync('prestored_information', this.data.dictionaries);
-      wx.navigateBack({})
+      wx.showToast({
+         title: '保存成功',
+         mask:true,
+         complete: function () {
+            setTimeout(function(){
+               wx.navigateBack({})
+            },1500)
+         }
+      })
    },
    onLoad: function (options) {
       var p_i = wx.getStorageSync('prestored_information');

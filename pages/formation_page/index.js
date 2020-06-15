@@ -15,9 +15,10 @@ Page({
       })
    },
    onclick: function (e) {
-      console.log(e.currentTarget.id);
+      console.log(e);
+      let v = e.currentTarget
       wx.navigateTo({
-         url: './line_up/index?id=' + e.currentTarget.id,
+         url: './line_up/index?id=' + v.id + '&name='+v.dataset.name,
       })
    },
    /**
