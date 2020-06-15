@@ -1,10 +1,42 @@
 <view class="cu-bar bg-white search fixed" style="">
    <view class="search-form round" style="background-color:#FFF">
       <text class="cuIcon-search"></text>
-      <input type="text"placeholder="搜索药品名" confirm-type="search" bindinput=""></input>
+      <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput=""></input>
    </view>
 </view>
-<view style="">
+<view class="VerticalBox">
+   <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="margin-top:100rpx;height: {{height*2-100}}rpx;">
+      <view class="cu-item {{index==TabCur?'text-red cur':''}}" wx:for="{{left}}" wx:key="item" bindtap='tabSelect' data-id="{{index}}">
+         {{item.name}}
+      </view>
+   </scroll-view>
+   <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="margin-top:100rpx;height: {{height*2-100}}rpx;" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+      <view wx:for="{{left}}" wx:for-item="it" wx:key="it" wx:for-index="index">
+         <view class="" wx:for-index="iindex" wx:for="{{it.medicine_set}}" wx:key="item" id="main-{{index}}">
+            <view class='cu-bar solid-bottom bg-white'>
+               <view class='action'>
+                  <view class="drugbox"  hover-class='wsui-btn__hover_list' bindtap="onclick" data-id='{{item.id}}'>
+                     <image class="imgdrug" src="{{item.image}}"></image>
+                     <view class="panel1box padding-xs">
+                        <text class="text-bold">{{item.name}}</text>
+                        <text class="text-gray text-sm margin-top-xs">销量：{{item.sold_num}}</text>
+                        <view class="margin-top-xs drugboxr">
+                           <text class="text-red text-lg">￥{{item.normal_price}}</text>
+                           <view class="text-xl">
+                              <text class="cuIcon-roundaddfill text-green pd1icon"></text>
+                           </view>
+                        </view>
+                     </view>
+                  </view>
+               </view>
+            </view>
+         </view>
+      </view>
+   </scroll-view>
+</view>
+
+
+<!-- <view style="">
    <scroll-view class="scroll" style="margin-top:100rpx;height: {{height*2-100}}rpx;" scroll-y>
       <view class="{{index==nevid?'act':''}}" wx:for="{{ left }}" wx:key="item" bindtap="scroll" data-id="{{index}}">{{ item.name }}</view>
    </scroll-view>
@@ -26,4 +58,4 @@
          </view>
       </view>
    </scroll-view>
-</view>
+</view> -->
