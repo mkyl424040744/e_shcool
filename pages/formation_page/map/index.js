@@ -26,7 +26,7 @@ Page({
             let data = res.data
             console.log(data)
             that.setData({
-               mdata:res.data
+               mdata: res.data
             })
             wx.getLocation({
                type: "wgs84",
@@ -38,6 +38,17 @@ Page({
                      markers: [{
                         latitude: data.lat,
                         longitude: data.lng
+                     }]
+                  })
+                  var mapCtx = wx.createMapContext("map");
+                  mapCtx.includePoints({
+                     padding: [70,],
+                     points: [{
+                        latitude: data.lat,
+                        longitude: data.lng
+                     }, {
+                        latitude: res.latitude,
+                        longitude: res.longitude
                      }]
                   })
                }

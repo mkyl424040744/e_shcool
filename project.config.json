@@ -74,6 +74,7 @@
 					"id": -1,
 					"name": "门诊队列",
 					"pathName": "pages/formation_page/index",
+					"query": "",
 					"scene": null
 				}
 			]

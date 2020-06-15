@@ -12,3 +12,8 @@
    width: 160rpx;
    height: 160rpx;
 }
+
+.centerFormat{
+   text-align: center;
+   justify-content: center;
+}
