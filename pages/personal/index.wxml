@@ -8,5 +8,5 @@
       </view>
    </view>
    <van-cell title="预留信息" is-link url="./set/index" />
-   <van-cell title="医保卡绑定" is-link url="" />
+   <van-cell title="医保卡绑定" is-link url="./medicare_card/index"/>
 </view>

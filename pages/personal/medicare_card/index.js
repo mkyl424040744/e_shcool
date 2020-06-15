@@ -1,40 +1,29 @@
-var data = require('../../data/data.js')
-
+// pages/personal/medicare_card/index.js
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      hp_img: "../../images/b1.jpg",
-      flog: false,
-      colors: ['cyan', 'blue', 'red', 'orange', 'olive', 'green']
-   },
-   searchIcon: function (e) {
-      console.log(e.detail.value)
-   },
-   urltiaoz: function (e) {
-      // if()
-      console.log(e.currentTarget.dataset.url)
-      if (e.currentTarget.dataset.url == 'kjdh') {
-         wx.showModal({
-            title: '快捷电话',
-            content: '13129342567',
-            showCancel: false,
-            cancelColor: '#333',
-            confirmText: '确认',
-            confirmColor: '#405f80'
-         })
+      dictionaries:{
+         'identity':'',
+         'medicare':''
       }
+   },
+   set_value: function (e) {
+      let newdi = this.data.dictionaries
+      // console.log(e.currentTarget.dataset.name)
+      newdi[e.currentTarget.dataset.name] = e.detail.value
+      this.setData({
+         dictionaries: newdi
+      })
+      // console.log(this.data.dictionaries)
    },
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
-      console.log(data)
-      this.setData({
-         square_data: data.data
-      });
+
    },
 
    /**

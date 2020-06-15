@@ -14,7 +14,8 @@ Page({
          'name': '',
          'dorm': '',
          'phone': ''
-      }
+      },
+      id:''
    },
    set_value: function (e) {
       let newdi = this.data.dictionaries
@@ -34,11 +35,41 @@ Page({
       })
       // console.log(this.data.dictionaries)
    },
+   save:function(){
+      let that = this
+      let data =this.data.dictionaries
+      console.log(data)
+      wx.request({
+         url: 'http://152.32.226.171:8000/queue/lineup/',
+         method: 'POST',
+         data: {
+            name:data.name,
+            sex:data.sex=='男生'?'1':'2',
+            grade:data.grade,
+            'class':data['class'],
+            phone:data.phone,
+            academy:data.number,
+            dormitory:data.dorm.dorm,
+            address:that.data.id
+         },
+         header: {
+            'Content-Type': 'application/json',
+            Authorization: 'JWT ' + 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImNoZW5qaWF4aW5nIiwiZXhwIjoxNjIzNzMyNjM4LCJlbWFpbCI6ImNoZW5qaWF4aW5nQHFxLmNvbSJ9.SS5DqxWdT5FirH17oF05K5TWnV79qkPU_ybAfRQo5fU',
+         },
+         success: res => {
+            console.log(res)
+            
+         }
+      })
+   },
    /**
     * 生命周期函数--监听页面加载
     */
    onLoad: function (options) {
       console.log(options.id)
+      this.setData({
+         id: options.id
+      })
       wx.setNavigationBarTitle({
          title:'排队'
       })

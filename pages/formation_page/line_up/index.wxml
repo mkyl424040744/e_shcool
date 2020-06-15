@@ -52,6 +52,6 @@
       <input placeholder="请输入手机号" value="{{dictionaries['phone']}}" bindinput="set_value" data-name="phone"></input>
    </view>
    <view class="buxs">
-      <button class="cu-btn bg-red" style="width:130rpx;">确认</button>
+      <button class="cu-btn bg-red" style="width:130rpx;" catchtap="save">确认</button>
    </view>
 </view>

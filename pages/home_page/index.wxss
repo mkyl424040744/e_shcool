@@ -17,7 +17,8 @@
    float: left;
    text-align: center;
    border-radius: 16rpx;
-   box-shadow: 1rpx 1rpx 10rpx 5rpx #ccc;
+   /* border: 1rpx solid #eee; rgb(224, 221, 221)*/
+   box-shadow: 1rpx 1rpx 1rpx 1rpx rgb(224, 221, 221);
 }
 
 .sq_title {

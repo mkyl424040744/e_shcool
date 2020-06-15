@@ -1,0 +1,17 @@
+<view class="padding-sm">
+   <view class="cu-form-group">
+      <view class="title placard">身份证</view>
+      <input placeholder="请输入身份证" maxlength="18" value="{{dictionaries['identity']}}" bindinput="set_value" data-name="identity"></input>
+   </view>
+   <view class="cu-form-group">
+      <view class="title placard">医保卡号</view>
+      <input placeholder="请输入医保卡号" maxlength="20" value="{{dictionaries['medicare']}}" bindinput="set_value" data-name="medicare"></input>
+   </view>
+   <view class="cu-form-group">
+      <view class="title placard">医保密码</view>
+      <input placeholder="请输入密码" type="password" bindinput="set_value" data-name="password"></input>
+   </view>
+   <view class="buxs">
+      <button class="cu-btn bg-red" style="width:130rpx;" catchtap="save">绑定</button>
+   </view>
+</view>
