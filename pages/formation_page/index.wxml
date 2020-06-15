@@ -13,7 +13,7 @@
                      <text class="cuIcon-locationfill lg text-{{colors[index]}}"></text>
                   </button>
                   <view class="margin-tb-sm text-center">
-                     <button style="width: 160rpx;" class="cu-btn bg-{{colors[index]}} {{shadow?'shadow':''}}" id="{{item.id}}" catchtap="onclick">排队</button>
+                     <button style="width: 160rpx;" class="cu-btn bg-{{colors[index]}} {{shadow?'shadow':''}}" id="{{item.id}}" catchtap="onclick" disabled="{{false}}">排队</button>
                   </view>
                </view>
             </view>

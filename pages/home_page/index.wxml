@@ -1,9 +1,9 @@
 <view class="b_container" style="background-image: url(http://gzcc-medical.oss-cn-shenzhen.aliyuncs.com/WechatIMG1166.jpeg);background-size:100% 450rpx;background-repeat:no-repeat;">
    <!-- <image class="hp_img" src="{{hp_img}}" /> -->
-   <view class="cu-bar search">
+   <view class="cu-bar search" style="background-color: #FFF;">
       <view class="search-form round" style="margin-top:270rpx;">
          <text class="cuIcon-search"></text>
-         <input type="text" placeholder="搜索药品名" confirm-type="search" bindinput="searchIcon"></input>
+         <input  type="text"  placeholder="搜索药品名" confirm-type="search" bindinput="searchIcon"></input>
       </view>
    </view>
    <view class='bottom_m'>

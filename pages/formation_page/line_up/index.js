@@ -58,7 +58,7 @@ Page({
          },
          success: res => {
             console.log(res)
-            
+            wx.navigateBack({})
          }
       })
    },
